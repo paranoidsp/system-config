@@ -43,7 +43,11 @@ RPROMPT="[%{$fg[magenta]%}%*%{$reset_color%}][%{$fg_no_bold[yellow]%}%?%{$reset_
 
 # tab comletion from both ends
 setopt completeinword
-HISTFILE='.bash_history'
+# Setting up history
+#cat git/system-config/.history/* >>git/system-config/tmp
+#rm git/system-config/.history/*
+#cat git/system-config/tmp>>git/system-config/.history/`date -Idate`
+HISTFILE='/home/paranoidsp/.bash_history'
 HISTSIZE=SAVEHIST=10000000
 setopt extendedglob
 unsetopt caseglob
