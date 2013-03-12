@@ -1,0 +1,1 @@
+Acquire::http::proxy "http://libjis:lib12345@localhost:1234/";

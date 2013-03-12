@@ -135,9 +135,8 @@ fi
 #Brown       0;33     Yellow        1;33
 #Light Gray  0;37     White         1;37
 # cygwin prompt 
- PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]:\[\!\]\n\$'
-#PS1='\[\e[1;34m\]\u\[\e[m\]@[\[\e[1;31m\]\t\[\e[m\]]:[\[\e[1;35m\]\!\[\e[m\]]@[\[\e[0;33m\]\#\[\e[m\]]:\[\e[0;36m\]\w\[\e[m\]\n$ 
-#'
+# PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]:\[\!\]\n\$'
+PS1='\[\e[1;34m\]\u\[\e[m\]@[\[\e[1;31m\]\t\[\e[m\]]:[\[\e[1;35m\]\!\[\e[m\]]@[\[\e[0;33m\]\#\[\e[m\]]:\[\e[0;36m\]\w\[\e[m\]\n$ '
 
 
 
@@ -146,7 +145,8 @@ export PATH=$PATH:~/Dropbox/programs/bash
 proxy="http://libjis:lib12345@proxy.iitm.ac.in:3128/"
 hproxy="http://ee11b053:F1xhdg+19lt@hproxy.iitm.ac.in:3128/"
 noproxy=""
-http_proxy=$hproxy
+
+
 export EDITOR=vim
 export LD_LIBRARY_PATH=/usr/local/lib
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
@@ -160,3 +160,9 @@ cd ~
 #HISTFILE='~/.bash_history'
 HISTIGNORE=cd:
 PATH=$PATH:~/sml/bin
+
+hproxy='http://ee11b053:F1xhdg+19lt@hproxy.iitm.ac.in:3128/'
+auth="http://libjis:lib12345@localhost:1234/"
+noauth='http://localhost:1234/'
+export http_proxy=$hproxy
+source ~paranoidsp/git/system-config/.proxyrc

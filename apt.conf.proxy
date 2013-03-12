@@ -1,0 +1,1 @@
+Acquire::http::proxy "http://libjis:lib12345@proxy.iitm.ac.in:3128/";

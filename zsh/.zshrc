@@ -66,16 +66,12 @@ bindkey "^[[B" history-search-forward
 
 #Proxy
 
-proxy="http://proxy.iitm.ac.in:3128/"
+proxy="http://libjis:lib12345@proxy.iitm.ac.in:3128/"
 hproxy="http://ee11b053:F1xhdg+19lt@hproxy.iitm.ac.in:3128/"
 noproxy=""
-http_proxy=$hproxy
-
-
-
-
-
-
+noauth='http://localhost:1234/'
+auth='http://libjis:lib12345@localhost:1234/'
+export http_proxy=$hproxy
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/home/paranoidsp/Dropbox/programs/bash:/home/paranoidsp/Dropbox/programs/bash:/home/paranoidsp/Dropbox/programs/bash
@@ -107,3 +103,18 @@ PATH=$PATH:/usr/local/cuda-5.0/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib
 cd ~
 PATH=$PATH:~/sml/bin
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/home/paranoidsp/Dropbox/programs/bash:/home/paranoidsp/Dropbox/programs/bash:/home/paranoidsp/Dropbox/programs/bash:/usr/local/cuda-5.0/bin:/home/paranoidsp/sml/bin:~/git/projects/coursera
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/home/paranoidsp/Dropbox/programs/bash:/home/paranoidsp/Dropbox/programs/bash:/home/paranoidsp/Dropbox/programs/bash:/usr/local/cuda-5.0/bin:/home/paranoidsp/sml/bin:/home/paranoidsp/git/projects/coursera:~/git/projects/scripts
+#ec2 Setup
+#export EC2_KEYPAIR=Karthik
+export EC2_URL=https://ec2.us-east-1.amazonaws.com
+export EC2_PRIVATE_KEY=$HOME/.ssh/pk-MPR73SJI6AH4DUFVLFM7YZ5ERF2HQGF6.pem
+export EC2_CERT=~/.ssh/cert-MPR73SJI6AH4DUFVLFM7YZ5ERF2HQGF6.pem
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
+
+
+alias lsd='ls -d */'
+alias rcp="rsync --partial --progress --append --rsh=ssh -r -h "
+alias rmv="rsync --partial --progress --append --rsh=ssh -r -h --remove-sent-files"
+source ~paranoidsp/git/system-config/.proxyrc
+

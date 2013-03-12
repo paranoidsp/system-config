@@ -1,0 +1,7 @@
+proxy="http://libjis:lib12345@proxy.iitm.ac.in:3128/"
+hproxy="http://ee11b053:F1xhdg+19lt@hproxy.iitm.ac.in:3128/"
+noproxy=""
+noauth='http://localhost:1234/'
+auth='http://libjis:lib12345@localhost:1234/'
+export http_proxy=$hproxy
+source ~paranoidsp/git/system-config/.proxychange
