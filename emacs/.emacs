@@ -1,4 +1,5 @@
-;(setq url-proxy-services '(("http" . "localhost:1234")))
+;(setq url-proxy-services '(("http" . "10.93.0.37:3333")))
+(setq url-proxy-services '(("http" . "localhost:1234")))
 
 (require 'package)
 ;; Add the original Emacs Lisp Package Archive
@@ -54,3 +55,8 @@ jabber-chat-buffer-show-avatar nil)
 
 ;; Line numbers
 (global-linum-mode t)
+(add-to-list 'load-path "~/.emacs.d/elpa/hlinum-20110605.955/")
+(load-file "~/.emacs.d/elpa/deep-thought-theme-0.0.6/deep-thought-theme.el")
+(require 'hlinum)
+(add-to-list 'load-path "~/.emacs.d/elpa/evil-20130306.1001")
+;(require 'evil-mode)
